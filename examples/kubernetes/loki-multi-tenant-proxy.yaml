@@ -19,7 +19,7 @@ stringData:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: loki-multi-tenant-proxy-config
+  name: lgtm-multi-tenant-proxy-config
   namespace: grafana
   labels:
     app: lgtm-multi-tenant-proxy
