@@ -1,4 +1,4 @@
-# Grafana - Multi tenant proxy
+# Loki Grafana Tempo Mimir - Multi tenant proxy
 
 This project has been developed to make easy to deploy a Grafana app like [Loki](https://github.com/grafana/loki) in a multi-tenant way.
 
@@ -9,7 +9,7 @@ There is a lot of understanding about how it works.
 
 This work was forked from https://github.com/k8spin/loki-multi-tenant-proxy/ and is almost based on [this issue comment](https://github.com/grafana/loki/issues/701#issuecomment-506504372).
 
-It should work with all GrafanaLabs apps (Loki, Mimir, Tempo, Pyroscope...) but it is primarily meant to work with Loki. So the documentations and examples will mostly be based on [Loki](https://github.com/grafana/loki).
+Repo is forked from [archived repo](https://github.com/giantswarm/grafana-multi-tenant-proxy) So the documentations and examples will mostly be based on [Loki](https://github.com/grafana/loki).
 
 ## What is it?
 
@@ -72,7 +72,7 @@ users:
 
 A tenant can contains multiple users. But a user is tied to a simple tenant.
 
-#### Configure the Grafana Loki clients, promtail
+#### Configure the exporter, promtail
 
 The default promtail configuration does not have any auth definition, so, after deploy this proxy you have to configure the promtail client configuration to point to this reverse proxy instead of pointing to the original grafana loki server.
 
