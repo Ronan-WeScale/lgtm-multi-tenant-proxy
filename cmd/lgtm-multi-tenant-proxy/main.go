@@ -5,7 +5,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	proxy "github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy"
+	proxy "github.com/ronan-wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy"
 )
 
 var (
@@ -23,7 +23,7 @@ func main() {
 		{Name: "Herve Nicol", Email: "herve@giantswarm.io"},
 		{Name: "Quentin Bisson", Email: "quentin@giantswarm.io"},
 		{Name: "Marie Roque", Email: "marie@giantswarm.io"},
-		{Name: "Ronan Ducamp", Email: "r.ducamp+github@gmail.com"}
+		{Name: "Ronan Ducamp", Email: "r.ducamp+github@gmail.com"},
 	}
 	app.Commands = []*cli.Command{
 		{

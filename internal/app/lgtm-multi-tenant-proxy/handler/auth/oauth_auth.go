@@ -14,7 +14,7 @@ import (
 	"github.com/coreos/go-oidc"
 	"go.uber.org/zap"
 
-	"github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/pkg/config"
+	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/pkg/config"
 )
 
 const (
