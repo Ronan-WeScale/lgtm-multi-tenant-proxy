@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: grafana-multi-tenant-proxy-auth-config
+  name: lgtm-multi-tenant-proxy-auth-config
   namespace: grafana
   labels:
-    app: grafana-multi-tenant-proxy
+    app: lgtm-multi-tenant-proxy
 stringData:
   authn.yaml: |-
     users:
@@ -22,25 +22,7 @@ metadata:
   name: loki-multi-tenant-proxy-config
   namespace: grafana
   labels:
-    app: grafana-multi-tenant-proxy
-stringData:
-  config.yaml: |-
-    targetServers:
-    - name: "loki-read"
-      host: "http://read.loki.giantswarm.io"
-      target: "http://loki-gateway.grafana.svc.cluster.local:3100"
-    - name: "loki-write"
-      host: "http://write.loki.giantswarm.io"
-      target: "http://loki-gateway.grafana.svc.cluster.local:3100"
-      keepOrgId: true
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: loki-multi-tenant-proxy-config
-  namespace: grafana
-  labels:
-    app: grafana-multi-tenant-proxy
+    app: lgtm-multi-tenant-proxy
 stringData:
   config.yaml: |-
     targetServers:
@@ -55,7 +37,7 @@ stringData:
 apiVersion: v1
 kind: Service
 metadata:
-  name: grafana-multi-tenant-proxy
+  name: lgtm-multi-tenant-proxy
   namespace: grafana
 spec:
   ports:
@@ -63,29 +45,29 @@ spec:
     protocol: TCP
     targetPort: 3100
   selector:
-    app: grafana-multi-tenant-proxy
+    app: lgtm-multi-tenant-proxy
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: grafana-multi-tenant-proxy
-  name: grafana-multi-tenant-proxy
+    app: lgtm-multi-tenant-proxy
+  name: lgtm-multi-tenant-proxy
   namespace: grafana
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: grafana-multi-tenant-proxy
+      app: lgtm-multi-tenant-proxy
   strategy: {}
   template:
     metadata:
       labels:
-        app: grafana-multi-tenant-proxy
+        app: lgtm-multi-tenant-proxy
     spec:
       containers:
-      - name: grafana-multi-tenant-proxy
-        image: angelbarrera92/grafana-multi-tenant-proxy:dev
+      - name: lgtm-multi-tenant-proxy
+        image: angelbarrera92/lgtm-multi-tenant-proxy:dev
         args:
           - "run"
           - "--port=3100"
@@ -98,7 +80,7 @@ spec:
         resources: {}
         volumeMounts:
           - name: config
-            mountPath: /etc/grafana-multi-tenant-proxy
+            mountPath: /etc/lgtm-multi-tenant-proxy
       volumes:
         - name: config
           projected:

@@ -1,4 +1,4 @@
-# Build the grafana-multi-tenant-proxy binary
+# Build the lgtm-multi-tenant-proxy binary
 FROM golang:1.24 as builder
 ARG TARGETOS
 ARG TARGETARCH
@@ -21,13 +21,13 @@ COPY pkg/ pkg/
 # was called. For example, if we call make docker-build in a local env which has the Apple Silicon M1 SO
 # the docker BUILDPLATFORM arg will be linux/arm64 when for Apple x86 it will be linux/amd64. Therefore,
 # by leaving it empty we can ensure that the container and binary shipped on it will have the same platform.
-RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -a -o grafana-multi-tenant-proxy cmd/grafana-multi-tenant-proxy/main.go
+RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} go build -a -o lgtm-multi-tenant-proxy cmd/lgtm-multi-tenant-proxy/main.go
 
-# Use distroless as minimal base image to package the grafana-multi-tenant-proxy binary
+# Use distroless as minimal base image to package the lgtm-multi-tenant-proxy binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
 FROM gcr.io/distroless/static:nonroot
 WORKDIR /
-COPY --from=builder /workspace/grafana-multi-tenant-proxy .
+COPY --from=builder /workspace/lgtm-multi-tenant-proxy .
 USER 65532:65532
 
-ENTRYPOINT ["/grafana-multi-tenant-proxy"]
+ENTRYPOINT ["/lgtm-multi-tenant-proxy"]

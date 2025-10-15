@@ -1,6 +1,6 @@
-module github.com/giantswarm/grafana-multi-tenant-proxy
+module github.com/Ronan-Wescale/lgtm-multi-tenant-proxy
 
-go 1.22
+go 1.24
 
 require (
 	github.com/coreos/go-oidc v2.3.0+incompatible

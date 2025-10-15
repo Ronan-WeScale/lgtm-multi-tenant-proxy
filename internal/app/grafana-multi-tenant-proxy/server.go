@@ -12,9 +12,9 @@ import (
 	"github.com/urfave/cli/v2"
 	"go.uber.org/zap"
 
-	"github.com/giantswarm/grafana-multi-tenant-proxy/internal/app/grafana-multi-tenant-proxy/handler"
-	"github.com/giantswarm/grafana-multi-tenant-proxy/internal/app/grafana-multi-tenant-proxy/handler/auth"
-	"github.com/giantswarm/grafana-multi-tenant-proxy/pkg/config"
+	"github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/internal/app/grafana-multi-tenant-proxy/handler"
+	"github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/internal/app/grafana-multi-tenant-proxy/handler/auth"
+	"github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/pkg/config"
 )
 
 var (

@@ -9,7 +9,7 @@ There is a lot of understanding about how it works.
 
 This work was forked from https://github.com/k8spin/loki-multi-tenant-proxy/ and is almost based on [this issue comment](https://github.com/grafana/loki/issues/701#issuecomment-506504372).
 
-Repo is forked from [archived repo](https://github.com/giantswarm/grafana-multi-tenant-proxy) So the documentations and examples will mostly be based on [Loki](https://github.com/grafana/loki).
+Repo is forked from [archived repo](https://github.com/Ronan-Wescale/lgtm-multi-tenant-proxy) So the documentations and examples will mostly be based on [Loki](https://github.com/grafana/loki).
 
 ## What is it?
 
@@ -110,7 +110,7 @@ If you want to build it from this repository, follow the instructions bellow:
 
 ```bash
 $ docker run -it --entrypoint /bin/bash --rm golang:latest
-root@6985c5523ed0:/go# git clone https://github.com/giantswarm/grafana-multi-tenant-proxy.git
+root@6985c5523ed0:/go# git clone https://github.com/Ronan-Wescale/lgtm-multi-tenant-proxy.git
 Cloning into 'grafana-multi-tenant-proxy'...
 remote: Enumerating objects: 88, done.
 remote: Counting objects: 100% (88/88), done.

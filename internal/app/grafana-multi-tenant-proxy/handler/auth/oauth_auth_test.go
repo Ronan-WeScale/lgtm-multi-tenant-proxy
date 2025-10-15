@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
 
-	"github.com/giantswarm/grafana-multi-tenant-proxy/pkg/config"
+	"github.com/Ronan-Wescale/lgtm-multi-tenant-proxy/pkg/config"
 )
 
 // #nosec G101
