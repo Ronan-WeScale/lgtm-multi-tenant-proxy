@@ -38,4 +38,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: | 
-            tcheksa62/ltgm-multi-tenant-proxy:${{ steps.get_version.outputs.VERSION }}
+            tcheksa62/lgtm-multi-tenant-proxy:${{ steps.get_version.outputs.VERSION }}
