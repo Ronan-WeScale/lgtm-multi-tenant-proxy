@@ -8,7 +8,7 @@ enabled: true
 global:
   image:
     # -- Overrides the Docker registry globally for all images
-    registry: ""
+    registry: "docker.io"
 
 proxy:
   # -- Number of replicas for the multi-tenant proxy
