@@ -8,7 +8,7 @@ enabled: true
 global:
   image:
     # -- Overrides the Docker registry globally for all images
-    registry: gsoci.azurecr.io
+    registry: "docker.io"
 
 proxy:
   # -- Number of replicas for the multi-tenant proxy
@@ -28,7 +28,7 @@ proxy:
 
   image:
     # -- Repository to get multi-tenant proxy image from.
-    repository: giantswarm/grafana-multi-tenant-proxy
+    repository: tcheksa62/lgtm-multi-tenant-proxy
     # -- Overrides the image tag whose default is the chart's appVersion
     tag: null
     # -- Overrides the image pull policy whose default is 'IfNotPresent'

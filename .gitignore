@@ -12,4 +12,4 @@
 *.out
 
 # Binary
-cmd/grafana-multi-tenant-proxy/grafana-multi-tenant-proxy
+cmd/lgtm-multi-tenant-proxy/lgtm-multi-tenant-proxy
