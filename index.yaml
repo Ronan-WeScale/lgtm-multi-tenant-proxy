@@ -3,6 +3,25 @@ entries:
   lgtm-multi-tenant-proxy:
   - apiVersion: v2
     appVersion: 0.9.0
+    created: "2025-10-16T13:45:38.684726479Z"
+    description: Helm chart for Grafana Multi Tenant Proxy
+    digest: 2b80958baae3c91acb510b25909001165ae03acf37d7a0480bacde05e3cc75fb
+    home: https://github.com/ronan-wescale/lgtm-multi-tenant-proxy
+    icon: https://s.giantswarm.io/app-icons/grafana/1/dark.svg
+    maintainers:
+    - email: kopolk@gmail.com
+      name: tcheksa62
+    - email: r.ducamp+github@gmail.com
+      name: ronan-wescale
+    name: lgtm-multi-tenant-proxy
+    sources:
+    - https://github.com/ronan-wescale/lgtm-multi-tenant-proxy
+    type: application
+    urls:
+    - https://github.com/Ronan-WeScale/lgtm-multi-tenant-proxy/releases/download/lgtm-multi-tenant-proxy-0.9.1/lgtm-multi-tenant-proxy-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: 0.9.0
     created: "2025-10-16T13:10:04.034665575Z"
     description: Helm chart for Grafana Multi Tenant Proxy
     digest: e24f6ffcebaea11bd664e737e80039c9d048cb035c024d7366230708246fcb61
@@ -39,4 +58,4 @@ entries:
     urls:
     - https://github.com/Ronan-WeScale/lgtm-multi-tenant-proxy/releases/download/lgtm-multi-tenant-proxy-0.8.0/lgtm-multi-tenant-proxy-0.8.0.tgz
     version: 0.8.0
-generated: "2025-10-16T13:10:04.034673921Z"
+generated: "2025-10-16T13:45:38.684742629Z"
