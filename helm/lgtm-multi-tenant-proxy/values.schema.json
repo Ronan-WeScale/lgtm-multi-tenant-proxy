@@ -65,7 +65,7 @@
             }
         },
         "fullnameOverride": {
-            "type": "null"
+            "type": "string"
         },
         "global": {
             "type": "object",
@@ -145,7 +145,7 @@
             }
         },
         "nameOverride": {
-            "type": "null"
+            "type": "string"
         },
         "networkPolicy": {
             "type": "object",
@@ -255,7 +255,7 @@
                             "type": "string"
                         },
                         "tag": {
-                            "type": "null"
+                            "type": "string"
                         }
                     }
                 },
