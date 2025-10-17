@@ -1,7 +1,7 @@
 # -- Overrides the chart's name
-nameOverride: null
+nameOverride: ""
 # -- Overrides the chart's computed fullname
-fullnameOverride: null
+fullnameOverride: ""
 
 enabled: true
 
@@ -30,7 +30,7 @@ proxy:
     # -- Repository to get multi-tenant proxy image from.
     repository: tcheksa62/lgtm-multi-tenant-proxy
     # -- Overrides the image tag whose default is the chart's appVersion
-    tag: null
+    tag: ""
     # -- Overrides the image pull policy whose default is 'IfNotPresent'
     pullPolicy: IfNotPresent
 
