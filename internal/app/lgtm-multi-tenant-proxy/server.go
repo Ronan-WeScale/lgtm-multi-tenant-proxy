@@ -98,6 +98,9 @@ func Serve(c *cli.Context) error {
 
 	// We handle metrics first to avoid calling the authentication middleware
 	http.Handle("/metrics", promhttp.Handler())
+	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		_, _ = w.Write([]byte("ok"))
+	})
 	http.HandleFunc("/", instrumentHandler(handlers))
 
 	// Reload config endpoint
