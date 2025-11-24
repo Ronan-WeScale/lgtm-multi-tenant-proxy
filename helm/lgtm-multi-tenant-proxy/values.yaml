@@ -24,7 +24,7 @@ proxy:
     # -- Target CPU utilisation percentage for the multi-tenant proxy
     targetCPUUtilizationPercentage: 90
     # -- Target memory utilisation percentage for the multi-tenant proxy
-    targetMemoryUtilizationPercentage:
+    targetMemoryUtilizationPercentage: 80
 
   image:
     # -- Repository to get multi-tenant proxy image from.
@@ -47,6 +47,19 @@ proxy:
     requests:
       memory: 50Mi
       cpu: 50m
+
+  # -- Readiness probe configuration
+  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http
+    initialDelaySeconds: 15
+  
+  ## - liveness probe configuration
+  livenessProbe:
+    httpGet:
+      path: /ready
+      port: http
 
   #  -- Disable if credentials are provided externally
   deployCredentials: false

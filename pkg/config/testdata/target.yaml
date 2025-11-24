@@ -1,0 +1,4 @@
+targetServers:
+- name: "loki"
+  host: "http://read.loki.giantswarm.io"
+  target: "http://loki-gateway.grafana.svc.cluster.local:3100"

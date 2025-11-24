@@ -42,6 +42,10 @@ spec:
             {{- toYaml .Values.proxy.containerSecurityContext | nindent 12 }}
           resources:
             {{- toYaml .Values.proxy.resources | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.proxy.readinessProbe | nindent 12 }}
+          livenessProbe:
+            {{- toYaml .Values.proxy.livenessProbe | nindent 12 }}
           volumeMounts:
             - name: config
               mountPath: /etc/proxy
