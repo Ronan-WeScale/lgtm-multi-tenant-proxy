@@ -51,14 +51,14 @@ proxy:
   # -- Readiness probe configuration
   readinessProbe:
     httpGet:
-      path: /ready
+      path: /health
       port: http
     initialDelaySeconds: 15
   
   ## - liveness probe configuration
   livenessProbe:
     httpGet:
-      path: /ready
+      path: /health
       port: http
 
   #  -- Disable if credentials are provided externally
