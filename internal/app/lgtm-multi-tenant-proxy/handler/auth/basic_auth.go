@@ -7,6 +7,7 @@ import (
 	"go.uber.org/zap"
 
 	"lgtm-multi-tenant-proxy/pkg/config"
+	"lgtm-multi-tenant-proxy/pkg/httputil"
 )
 
 const (
@@ -37,7 +38,7 @@ func (a BasicAuthenticator) Authenticate(r *http.Request, targetServer *config.T
 func (a BasicAuthenticator) OnAuthenticationError(w http.ResponseWriter, r *http.Request) {
 	a.logger.Error("Basic authentication failed",
 		zap.String("username", a.user),
-		zap.String("ip", r.RemoteAddr),
+		zap.String("ip", httputil.RealClientIP(r)),
 	)
 	w.Header().Set("WWW-Authenticate", `Basic realm="`+realm+`"`)
 	w.WriteHeader(401)
