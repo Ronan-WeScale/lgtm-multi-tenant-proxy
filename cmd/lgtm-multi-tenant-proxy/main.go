@@ -5,7 +5,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	proxy "github.com/ronan-wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy"
+	proxy "lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy"
 )
 
 var (

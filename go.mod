@@ -1,4 +1,4 @@
-module github.com/ronan-wescale/lgtm-multi-tenant-proxy
+module lgtm-multi-tenant-proxy
 
 go 1.24.8
 

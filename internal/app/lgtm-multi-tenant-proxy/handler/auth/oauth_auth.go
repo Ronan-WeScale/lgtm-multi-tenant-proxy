@@ -14,7 +14,7 @@ import (
 	"github.com/coreos/go-oidc"
 	"go.uber.org/zap"
 
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/pkg/config"
+	"lgtm-multi-tenant-proxy/pkg/config"
 )
 
 const (
@@ -64,7 +64,7 @@ func (a OAuthAuthenticator) Authenticate(r *http.Request, targetServer *config.T
 	return false, ""
 }
 
-func (a OAuthAuthenticator) OnAuthenticationError(w http.ResponseWriter) {
+func (a OAuthAuthenticator) OnAuthenticationError(w http.ResponseWriter, r *http.Request) {
 	a.logger.Error("OAuth authentication failed")
 	w.WriteHeader(401)
 	_, err := w.Write([]byte("Unauthorised\n"))

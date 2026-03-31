@@ -8,8 +8,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler/auth"
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/pkg/config"
+	"lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler/auth"
+	"lgtm-multi-tenant-proxy/pkg/config"
 )
 
 type Proxy struct {

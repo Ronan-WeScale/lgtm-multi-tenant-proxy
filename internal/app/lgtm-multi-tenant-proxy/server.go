@@ -12,9 +12,9 @@ import (
 	"github.com/urfave/cli/v2"
 	"go.uber.org/zap"
 
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler"
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler/auth"
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/pkg/config"
+	"lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler"
+	"lgtm-multi-tenant-proxy/internal/app/lgtm-multi-tenant-proxy/handler/auth"
+	"lgtm-multi-tenant-proxy/pkg/config"
 )
 
 var (

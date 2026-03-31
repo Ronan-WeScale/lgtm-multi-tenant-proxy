@@ -8,7 +8,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/ronan-wescale/lgtm-multi-tenant-proxy/pkg/config"
+	"lgtm-multi-tenant-proxy/pkg/config"
 )
 
 type key int
@@ -21,7 +21,7 @@ const (
 // INTERFACE to handle different type of authentication
 type Authenticator interface {
 	Authenticate(r *http.Request, targetServer *config.TargetServer) (bool, string)
-	OnAuthenticationError(w http.ResponseWriter)
+	OnAuthenticationError(w http.ResponseWriter, r *http.Request)
 }
 
 type AuthenticationMiddleware struct {
@@ -71,7 +71,7 @@ func (am AuthenticationMiddleware) Authenticate() http.HandlerFunc {
 		am.logger.Debug(fmt.Sprintf("Authentication mode: %T", authenticator))
 		ok, orgID := authenticator.Authenticate(r, targetServer)
 		if !ok {
-			authenticator.OnAuthenticationError(w)
+			authenticator.OnAuthenticationError(w, r)
 			return
 		}
 		ctx := context.WithValue(r.Context(), OrgIDKey, orgID)
